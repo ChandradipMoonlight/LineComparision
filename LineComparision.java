@@ -35,11 +35,15 @@ public class LineComparision {
 		System.out.println("lenth of line1= "+ distanceLine1);
 		System.out.println("Length of line 2 = "+ distanceLine2);
 		
-		if (distanceLine1==distanceLine2) {
-			System.out.println("Two lines are Equal");
-		} else {
-			System.out.println("Two lines are not Euqal");
+		if (distanceLine1<distanceLine2) {
+			System.out.println("Line1 is less than Line2");
+		} 
+		else if (distanceLine1>distanceLine2) {
+			System.out.println("Line1 is greater than line2");
 		}
+		else {
+			System.out.println("Two lines are Equal");
+		} 
 		
 
 	}
