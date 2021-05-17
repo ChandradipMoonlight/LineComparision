@@ -42,7 +42,7 @@ public class LineComparision {
 			System.out.println("Line1 is greater than line2");
 		}
 		else {
-			System.out.println("Two lines are Equal");
+			System.out.println(" Two lines are Equal ");
 		} 
 		
 
