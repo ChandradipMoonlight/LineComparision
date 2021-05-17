@@ -1,51 +1,64 @@
 package linedistance;
-import java.util.Scanner;
+//import java.util.Scanner;
+
+
+class DistanceOfLine{
+	
+
+public int x1, x2, y1, y2;
+
+
+public  DistanceOfLine(int x1, int x2, int y1, int y2) {
+	 this.x1=x1;
+	 this.x2=x2;
+	 this.y1=y1;
+	 this.y2=y2;
+	 
+}
+
+
+public double calculateDistanceOfLine() {
+	double distanceLine = Math.sqrt(Math.pow(x2-x1,2) + Math.pow(y2-y1,2));
+
+	return distanceLine;
+}
+
+
+}
+
 
 public class LineComparision {
+
+	
+	public static void diffOfLine(double length1,double length2) {
+		if (length1<length2) {
+			System.out.println("line-1 is less than line-2.");
+		} else if (length2<length1) {
+			System.out.println("line-2 is less than line-1.");
+		} else {
+			System.out.println("Both line has equal lenth.");
+		}
+		
+	}
 	
 	public static void main(String[] args) {
-		System.out.println("Welcome to the Line comparision computation Program");
+		System.out.println("Wellcome to the Line comparision Computatation problem");
 		
-		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("enter the value of  co-ordinate ");
-		System.out.println("x1= ");
-		int x1 = sc.nextInt();
-		System.out.println("y1");
-		int y1 = sc.nextInt();
-		System.out.println("x2= ");
-		int x2 = sc.nextInt();
-		System.out.println("y2= ");
-		int y2 = sc.nextInt();
 		
-		double distanceLine1=Math.sqrt(Math.pow(x2-x1,2) + Math.pow(y2-y1,2));
+		DistanceOfLine line1 = new DistanceOfLine(5, 8, 6, 9);
+	
+		double length1 = line1.calculateDistanceOfLine();	
+		System.out.println("Length of line-1 = "+length1);
 		
-		System.out.println("Enter the values next co-ordinates ");
-		System.out.println("x3= ");
-		int x3 = sc.nextInt();
-		System.out.println("y3");
-		int y3 = sc.nextInt();
-		System.out.println("x4= ");
-		int x4 = sc.nextInt();
-		System.out.println("y4= ");
-		int y4 = sc.nextInt();
 		
-		double distanceLine2=Math.sqrt(Math.pow(x4-x3,2) + Math.pow(y4-y3,2));
+		DistanceOfLine line2 = new DistanceOfLine(11, 9, 8, 9);
+	
+		double length2 = line2.calculateDistanceOfLine();	
+		System.out.println("Length of line-2 = "+length2);
 		
-		System.out.println("lenth of line1= "+ distanceLine1);
-		System.out.println("Length of line 2 = "+ distanceLine2);
+		diffOfLine(length1, length2);
+			
 		
-		if (distanceLine1<distanceLine2) {
-			System.out.println("Line1 is less than Line2");
-		} 
-		else if (distanceLine1>distanceLine2) {
-			System.out.println("Line1 is greater than line2");
-		}
-		else {
-			System.out.println(" Two lines are Equal ");
-		} 
-		
-
-	}
-
+}
 }
